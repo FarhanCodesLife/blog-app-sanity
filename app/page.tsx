@@ -21,14 +21,41 @@ const Page = () => {
     "authorimage": author->image
   }`;
 
+
+  
   useEffect(() => {
+    const query = `*[_type == "blogs"]`;
     client
       .fetch(query)
       .then((data) => {
         setPosts(data);
       })
       .catch(console.error);
-  }, []);
+  }, [query]);
+
+
+
+//   useEffect(() => {
+//     const responce = async()=>{
+// try{
+
+//   client
+//   .fetch(query)
+//   .then((data) => {
+//     setPosts(data);
+//   })
+//   .catch(console.error);
+// }
+// catch{
+// console.log("error");
+
+// }
+//     }
+
+//     responce()
+
+
+//   }, []);
 
   console.log(posts);
 
