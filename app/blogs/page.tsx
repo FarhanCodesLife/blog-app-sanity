@@ -28,7 +28,7 @@ const Blogs = () => {
         setPosts(data);
       })
       .catch(console.error);
-  }, []);
+  }, [query]);
 
   console.log(posts);
 
