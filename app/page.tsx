@@ -18,7 +18,8 @@ const Page = () => {
     content,
     blogimage,
     "authorname": author->name,
-    "authorimage": author->image
+    "authorimage": author->image,
+    _createdAt,
   }`;
 
 
@@ -70,7 +71,8 @@ const Page = () => {
           blogimage: SanityImageSource;
           authorname: string;
           authorimage: SanityImageSource;
-          timestamp: string; // Added timestamp
+          timestamp: string; // Added timestamp,
+          _createdAt:string;
         }) => (
           <div
             key={post._id}
@@ -82,14 +84,14 @@ const Page = () => {
                 <Image
                   width={50}
                   height={50}
-                  src={urlFor(post.authorimage).width(50).url()}
+                  src={urlFor(post.authorimage).url()}
                   alt={post.authorname}
-                  className="rounded-full border border-gray-300"
+                  className="rounded-full object-cover border border-gray-300"
                 />
               )}
               <div>
                 <p className="text-gray-800 font-semibold">{post.authorname}</p>
-                <p className="text-gray-500 text-sm">{post.timestamp}</p>
+                <p className="text-gray-500 text-sm">{post._createdAt}</p>
               </div>
             </div>
   
