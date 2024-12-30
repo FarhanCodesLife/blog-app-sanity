@@ -57,15 +57,18 @@ const Blogs = () => {
               <article key={post._id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 {/* Header Section */}
               <div className="flex items-center gap-4 p-6 bg-gray-50 border-b border-gray-200">
+                <div className="rounded-full">
+
                 {post.authorimage && (
                   <Image
-                    width={50}
-                    height={50}
+                    width={100}
+                    height={100}
                     src={urlFor(post.authorimage).url()}
                     alt={post.authorname}
-                    className="rounded-full object-cover border border-gray-300"
-                  />
+                    className="rounded-full w-12 h-12 object-cover border border-gray-300"
+                    />
                 )}
+                    </div>
                 <div>
                   <p className="text-lg font-semibold text-gray-800">
                     {post.authorname}
