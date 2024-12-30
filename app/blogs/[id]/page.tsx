@@ -1,8 +1,8 @@
 "use client"
 
-import { client } from '@/sanity/lib/client';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import { client } from '@/sanity/lib/client';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import Image from 'next/image';
 import { urlFor } from '@/sanity/lib/image';
