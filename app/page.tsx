@@ -73,12 +73,7 @@ const page = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-6 bg-gray-800 text-gray-400">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} Blog App. All rights reserved.</p>
-        </div>
-      </footer>
+      
     </div>
   );
 };

@@ -99,15 +99,15 @@ const Blogs = () => {
                 {/* Like, Comment, Share Buttons */}
                 <div className="flex items-center gap-6 text-gray-600">
                   <button className="flex items-center hover:text-blue-500 transition-colors">
-                    <span className="material-icons-outlined mr-1">thumb_up</span>
+                    {/* <span className="material-icons-outlined mr-1">thumb_up</span> */}
                     Like
                   </button>
                   <button className="flex items-center hover:text-green-500 transition-colors">
-                    <span className="material-icons-outlined mr-1">comment</span>
+                    {/* <span className="material-icons-outlined mr-1">comment</span> */}
                     Comment
                   </button>
                   <button className="flex items-center hover:text-red-500 transition-colors">
-                    <span className="material-icons-outlined mr-1">share</span>
+                    {/* <span className="material-icons-outlined mr-1">share</span> */}
                     Share
                   </button>
                 </div>
