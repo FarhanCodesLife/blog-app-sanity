@@ -7,10 +7,22 @@ import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import Image from 'next/image';
 import { urlFor } from '@/sanity/lib/image';
 
+interface BlogPost {
+  _id: string;
+  blogtitle: string;
+  content: string;
+  blogimage: SanityImageSource;
+  authorname: string;
+  authorimage: SanityImageSource;
+  _createdAt: string;
+}
 const page = () => {
     
-    const [posts, setPosts] = useState([]);
-  const query = `*[_type == "blogs"]{
+  
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+
+
+    const query = `*[_type == "blogs"]{
     _id,
     blogtitle,
     content,
@@ -28,13 +40,13 @@ const page = () => {
     client
       .fetch(query)
       .then((data) => {
-        const singledata = data.filter((item: any) => item._id === id); 
+        const singledata = data.filter((item: BlogPost) => item._id === id); 
         setPosts(singledata);
         // console.log(singledata);
         
       })
       .catch(console.error);
-  }, [query]);
+  }, [id]);
 
 console.log(posts);
 
