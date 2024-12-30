@@ -81,23 +81,24 @@ console.log(posts);
         
                       {/* Content Section */}
                       <div className="p-6">
+                      {post.blogimage && (
+                          <div className="rounded-lg overflow-hidden mb-4">
+                            <Image
+                              width={600}
+                              height={300}
+                              src={urlFor(post.blogimage).width(1000).url()}
+                              alt={post.blogtitle}
+                              className="rounded-md w-full h-1/2"
+                            />
+                          </div>
+                        )}
                         <h2 className="text-2xl font-bold text-gray-900 mb-3">
                           {post.blogtitle}
                         </h2>
                         <p className="text-gray-700 leading-relaxed mb-4 ">
                           {post.content}
                         </p>
-                        {post.blogimage && (
-                          <div className="rounded-lg overflow-hidden mb-4">
-                            <Image
-                              width={700}
-                              height={400}
-                              src={urlFor(post.blogimage).width(700).url()}
-                              alt={post.blogtitle}
-                              className="rounded-md"
-                            />
-                          </div>
-                        )}
+                       
                       </div>
         
                       {/* Footer Section */}
