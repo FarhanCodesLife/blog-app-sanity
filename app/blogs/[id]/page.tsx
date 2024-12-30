@@ -16,7 +16,7 @@ interface BlogPost {
   authorimage: SanityImageSource;
   _createdAt: string;
 }
-const page = () => {
+const Page = () => {
     
   
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -150,4 +150,4 @@ console.log(posts);
   )
 }
 
-export default page
+export default Page
