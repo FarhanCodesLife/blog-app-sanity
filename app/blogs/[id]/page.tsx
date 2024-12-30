@@ -84,7 +84,7 @@ console.log(posts);
                         <h2 className="text-2xl font-bold text-gray-900 mb-3">
                           {post.blogtitle}
                         </h2>
-                        <p className="text-gray-700 leading-relaxed mb-4 line-clamp-3">
+                        <p className="text-gray-700 leading-relaxed mb-4 ">
                           {post.content}
                         </p>
                         {post.blogimage && (
@@ -105,26 +105,26 @@ console.log(posts);
                         {/* Like, Comment, Share Buttons */}
                         <div className="flex items-center gap-6 text-gray-600">
                           <button className="flex items-center hover:text-blue-500 transition-colors">
-                            <span className="material-icons-outlined mr-1">thumb_up</span>
+                            {/* <span className="material-icons-outlined mr-1">thumb_up</span> */}
                             Like
                           </button>
                           <button className="flex items-center hover:text-green-500 transition-colors">
-                            <span className="material-icons-outlined mr-1">comment</span>
+                            {/* <span className="material-icons-outlined mr-1">comment</span> */}
                             Comment
                           </button>
                           <button className="flex items-center hover:text-red-500 transition-colors">
-                            <span className="material-icons-outlined mr-1">share</span>
+                            {/* <span className="material-icons-outlined mr-1">share</span> */}
                             Share
                           </button>
                         </div>
         
                         {/* Read More Button */}
-                        <a
+                        {/* <a
                           href={`/blogs/${post._id}`}
                           className="text-blue-500 font-semibold hover:underline"
                         >
                           Read More →
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   )
