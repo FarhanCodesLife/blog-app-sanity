@@ -54,8 +54,11 @@ const Blogs = () => {
             _createdAt: string;
           }) => (
 
-              <article key={post._id} className="bg-white rounded-lg shadow-md overflow-hidden">
-                {/* Header Section */}
+              <article key={post._id}
+              // href={`/blogs/${post._id}`}
+
+              className="bg-white cursor-pointer rounded-lg shadow-md overflow-hidden">
+                {/* Header Section
               <div className="flex items-center gap-4 p-6 bg-gray-50 border-b border-gray-200">
                 <div className="rounded-full">
 
@@ -77,7 +80,7 @@ const Blogs = () => {
                     {new Date(post._createdAt).toLocaleDateString()}
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {post.blogimage && (
                   <div className="rounded-lg overflow-hidden mb-4">
@@ -95,22 +98,19 @@ const Blogs = () => {
                   <h2 className="text-2xl font-bold mb-4">{post.blogtitle}</h2>
                   <p className="text-gray-600 mb-4"> {post.content.slice(0,150)}...</p>
                    {/* Footer Section */}
-              <div className="flex justify-between items-center p-4 border-t border-gray-200 bg-gray-50">
+              <div className="flex flex-row-reverse justify-between items-center p-4 border-t border-gray-200 bg-gray-50">
                 {/* Like, Comment, Share Buttons */}
-                <div className="flex items-center gap-6 text-gray-600">
+                {/* <div className="flex items-center gap-6 text-gray-600">
                   <button className="flex items-center hover:text-blue-500 transition-colors">
-                    {/* <span className="material-icons-outlined mr-1">thumb_up</span> */}
                     Like
                   </button>
                   <button className="flex items-center hover:text-green-500 transition-colors">
-                    {/* <span className="material-icons-outlined mr-1">comment</span> */}
                     Comment
                   </button>
                   <button className="flex items-center hover:text-red-500 transition-colors">
-                    {/* <span className="material-icons-outlined mr-1">share</span> */}
                     Share
                   </button>
-                </div>
+                </div> */}
                   <a
                   href={`/blogs/${post._id}`}
                   className="text-blue-500 font-semibold hover:underline"
